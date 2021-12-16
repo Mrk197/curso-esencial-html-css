@@ -1,0 +1,270 @@
+@font-face{
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face{
+    font-family: charter-italic;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face{
+    font-family: charter-bold;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face{
+    font-family: charter-bold-italic;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: 700;
+}
+
+:root {
+    font-size: 18px;
+    --white30: #FFFFFE;
+    --white20: #A5A3A5;
+    --white10: #3A3539;
+    ;
+}
+
+body{
+    color: var(--white30);
+    font-family: 'Montserrat', sans-serif;
+    font-family: charter;
+    background: #232946;
+}
+
+a {
+    color: var(--white30);
+}
+
+.header-content{
+    padding-inline: 20px;
+}
+
+header{
+    margin-block-start: 10px;
+    font-size: 14px;
+    color: var(--white30);
+}
+
+header li{
+    color: var(--white20);
+    padding: 8px;
+}
+
+header a {
+    color: var(--white20);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--white10);
+}
+
+nav details summary{
+    font-weight: bold;
+}
+
+li.active{
+    background: black;
+}
+
+.variantes{
+    list-style-type: none;
+}
+
+summary::marker{
+    content: " ";
+}
+
+.icono:before { 
+    content: url("../img/Union.svg") " ";
+    width: 17px;
+    height: 10px;
+  }
+
+hr{
+    margin-block: 40px;
+    border-color: rgba(97, 97, 97, 0.2);
+}
+
+h1, h2, h3 {
+    /*font-weight: normal;*/
+}
+
+h1{
+    font-size: 40px;
+    margin-block-start: 20px;
+    margin-block-end: 16px;
+}
+
+h2{
+    font-size: 2em;
+    margin-block: 40px;
+}
+
+h3{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-block: 16px;
+}
+
+pre{
+    color: var(--white20);
+    padding: 40px;
+    border-radius: 8px;
+    overflow: auto;
+    margin-block-end: 30px;
+}
+
+p{
+    color: #B8C1EC;
+    ;
+}
+
+.section-content{
+    counter-reset: titlelist;
+}
+
+.section-content img{
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+}
+
+.section-content h3{
+    counter-increment: titlelist;
+}
+
+.section-content h3::before{
+    content: counter(titlelist)". ";
+}
+
+blockquote{
+    margin-block-start: 80px;
+    margin-block-start: 63px;
+    background-color: #D4939D;
+    border-radius: 8px;
+    line-height: 32px;
+    font-size: 24px;
+    padding-inline: 24px;
+    padding-block: 24px;
+}
+
+blockquote p{
+    color: #232946;
+}
+
+.main hr{
+    display: none;
+}
+
+.main{
+
+}
+
+.wrapper{
+    max-inline-size: 902px;
+    /*overflow: auto;*/
+    margin: auto;
+}
+
+.main-content{
+    padding-inline: 16px;
+}
+
+.slider-container{
+    /*block-size: 100px;*/
+    display: block;
+    overflow: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video{ 
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list{
+    text-align: center;
+    margin-block-start: 10px;
+}
+.slider-bullet{
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: white;
+    border-radius: 50%;
+}
+
+.form input{
+    inline-size: 100%;
+    border: 1px solid var(--white30);
+    background: transparent;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--white30);
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px;
+}
+
+.form input[type="submit"]{
+    background: #EEBBC3;
+    color: #232946;
+    border: none;
+    font-weight: bold;
+}
+
+.form input::-webkit-input-placeholder{
+    color: var(--white20);
+}
+
+.footer{
+    text-align: center;
+    margin-top: 128px;
+    background: #EEBBC3;
+    color: var(--white10);
+    padding-top: 48px;
+    padding-bottom: 45px;
+}
+
+@media screen and (min-width: 1336px) {
+    .hero{
+        block-size: 350px;
+    }
+    .header{
+        position: sticky;
+        inset-block-start: -45px;
+    }
+    
+    .header-content{
+        position: relative;
+        inset-block-start: 65px;
+        scroll-padding-inline: 0;
+    }
+    
+    header{
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+        inline-size: 188px;
+    }
+    h1{
+        font-size: 60px;
+        margin-block-start: 64px;
+    }
+}
